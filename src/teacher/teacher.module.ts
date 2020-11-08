@@ -6,10 +6,10 @@ import { TeacherService } from './teacher.service';
 
 @Module({
   imports: [forwardRef(() => StudentModule)],
-  controllers: [TeacherController],
   providers: [
     TeacherService,
   ],
+  controllers: [TeacherController],
   exports: [TeacherService]
 })
 export class TeacherModule { }

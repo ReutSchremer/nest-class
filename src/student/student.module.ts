@@ -4,8 +4,10 @@ import { StudentController } from './student.controller';
 import { TeacherModule } from 'src/teacher/teacher.module';
 
 @Module({
-  imports: [forwardRef(() => TeacherModule)],
-  providers: [StudentService],
+  imports: [forwardRef(() => TeacherModule),],
+  providers: [
+    StudentService,
+  ],
   controllers: [StudentController],
   exports: [StudentService]
 })

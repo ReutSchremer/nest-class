@@ -1,11 +1,11 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Inject, Post } from '@nestjs/common';
 import { TeacherService } from './teacher.service';
 
-@Controller('teacher')
+@Controller('/teacher')
 export class TeacherController {
 
     constructor(
-        private readonly teacherService: TeacherService
+        private readonly teacherService: TeacherService,
     ) {
     }
 

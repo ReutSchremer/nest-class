@@ -9,7 +9,8 @@ export class TeacherService {
     private classes: ClassDB;
     constructor(
         @Inject(forwardRef(() => StudentService))
-        private readonly studentsService: StudentService
+        private readonly studentsService: StudentService,
+
     ) {
         this.classes = {
             1: {

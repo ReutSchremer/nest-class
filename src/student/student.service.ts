@@ -6,7 +6,7 @@ export class StudentService {
 
     constructor(
         @Inject(forwardRef(() => TeacherService))
-        private readonly teachrService: TeacherService
+        protected readonly teachrService: TeacherService
     ) {
         console.log("creating student service ")
     }
